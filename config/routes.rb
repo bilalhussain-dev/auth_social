@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/profile'
+  devise_for :users, controller: {
+    session: "users/session",
+    registerations: "users/registerations"
+  }
   resources :posts
   get 'pages/home'
   get 'pages/about'

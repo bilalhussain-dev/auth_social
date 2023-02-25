@@ -2,6 +2,8 @@
   <div class="card">
     <div class="card-header">
       <h4 class="card-title"><%= post.title %></h4>
+      <p><%= pluralize(post.views, "View") %></p>
+      <p>Posted by: <%= post.user.email %></p>
     </div>
     <div class="card-body">
       <p class="card-text">
